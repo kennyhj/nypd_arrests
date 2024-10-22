@@ -1,7 +1,7 @@
-# NYPD Arrests (2006-2023)
+# NYPD Historic Arrests Case Study
 ![alt text](link_to_image)
 
-This project performs exploratory data analysis on the historic arrest dataset from the NYPD, publicly avaiable on [NYC Open Data.](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
+This project performs exploratory data analysis on the arrest dataset from the NYPD from 2006 - 2023, publicly avaiable on [NYC Open Data.](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 nycopendata image
 - Tools used: MySQL, Tableau
 
@@ -21,10 +21,11 @@ UPDATE nypd_arrests SET OFNS_DESC = 'KIDNAPPING & RELATED OFFENSES' WHERE OFNS_D
 
 UPDATE nypd_arrests SET OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIED' WHERE OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIE';
 ```
+[(Click here to view all of the SQL queries)](https://github.com/kennyhj/nypd_arrests/blob/main/nypd_arrests.sql)
 
 
-3. Cleaned dataset imported into Tableau for visualized insights ([Link To Public Tableau Dashboard](https://public.tableau.com/app/profile/kenny.jeong/viz/NYPDHistoricArrests/NYPDArrestDashboard))
-- dashboard contains: nyc heatmap, demographics chart, yearly arrest rate line graph, crime type chart
+## 3. Imported the cleaned dataset into Tableau for visualized insights ([Link To Dashboard](https://public.tableau.com/app/profile/kenny.jeong/viz/NYPDHistoricArrests/NYPDArrestDashboard))
+- Contains: crime type bar chart, nyc precinct/boro heatmap, demographics bar chart, yearly arrest
 
 ![alt text](link_to_image)
 - Top 3 types of crime (drugs, assault, and theft)
