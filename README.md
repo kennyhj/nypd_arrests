@@ -4,7 +4,7 @@
 This project performs exploratory data analysis on the arrest dataset from the NYPD from 2006 - 2023, publicly avaiable on [NYC Open Data.](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 nycopendata image
 - Tools used: MySQL, Tableau
-- [Link to the Slideshow Presentation of this Case Study](https://github.com/kennyhj/nypd_arrests/blob/main/NYPD%20Historic%20Arrests%20Case%20Study.pdf)
+- [Link to a more detailed slideshow presentation of this case study](https://github.com/kennyhj/nypd_arrests/blob/main/NYPD%20Historic%20Arrests%20Case%20Study.pdf)
 
 ## 1. Examining the data structure in Excel
 - Observed the column headers as well as their types for this dataset of over 5 million rows
