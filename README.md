@@ -4,6 +4,7 @@
 This project performs exploratory data analysis on the arrest dataset from the NYPD from 2006 - 2023, publicly avaiable on [NYC Open Data.](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 nycopendata image
 - Tools used: MySQL, Tableau
+- [Link to the Slideshow Presentation of this Case Study](https://github.com/kennyhj/nypd_arrests/blob/main/NYPD%20Historic%20Arrests%20Case%20Study.pdf)
 
 ## 1. Examining the data structure in Excel
 - Observed the column headers as well as their types for this dataset of over 5 million rows
@@ -17,6 +18,7 @@ nycopendata image
 - Cleaned null values (opted to not drop those rows outright)
 - Observed values in each column to clean/group values (e.g. crime types often had typos, as well as having values that overlapped with each other)
 ```SQL
+-- A couple of query examples cleaning the data
 UPDATE nypd_arrests SET OFNS_DESC = 'KIDNAPPING & RELATED OFFENSES' WHERE OFNS_DESC = 'KIDNAPPING' OR OFNS_DESC = 'KIDNAPPING AND RELATED OFFENSES';
 
 UPDATE nypd_arrests SET OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIED' WHERE OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIE';
@@ -35,17 +37,22 @@ UPDATE nypd_arrests SET OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIED' WHERE OFNS
 - Boros ranked most to least arrests: Brooklyn, Manhattan, Bronx, Queens, Staten Island
 <img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/heatmap.jpg" width="500">
 
-- Stacked bar chart of demographics data: race, gender, and age group
+- Clustered stacked bar chart of demographics data: race, gender, and age group
 - Black males age 25-44 have the highest arrest rates, followed by White-Hispanic males age 25-44
 - (There is no sole Hispanic race value in this dataset, it is divided as White-Hispanic and Black-Hispanic) 
 <img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/demographics.jpg" width="600">
 
-- examined census data from 2020 of NYC categorized by borough
+- Stacked bar chart of the NYC 2020 Census displaying populations by race per borough
+- The black population accounts for the 3rd highest population in NYC despite having the highest arrest rates
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/census_2020_nyc.jpg" width="600">
 
 - Line graph of # of arrests per year (2006 - 2023)
 - A downward trend in the 2010s, but then saw a significant rise starting in 2020
 <img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/yearly.jpg" width="550">
 
-4. Conclusions
-- I would suggest further stuidy into the effects of the covid-19 on crime, as well as economic distressors in general
-- further study intersecting racial demographics
+## 4. Conclusions
+- Black men account for the highest number of arrests, despite being the 3rd highest population in NYC
+  - This discrepancy highlights a possible racial bias in policing
+  - I would also cross examine financial/housing data with racial demographics
+- Arrest rates spiked in 2020 after about a decade of decline
+  - I would suggest further stuidy into the effects of the covid-19 on crime
