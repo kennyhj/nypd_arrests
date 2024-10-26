@@ -1,5 +1,5 @@
 # NYPD Historic Arrests Case Study
-![alt text](link_to_image)
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/nypd%20logo.jpg" width="300">
 
 This project performs exploratory data analysis on the arrest dataset from the NYPD from 2006 - 2023, publicly avaiable on [NYC Open Data.](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-/8h9b-rp9u/about_data)
 nycopendata image
@@ -9,7 +9,7 @@ nycopendata image
 - Observed the column headers as well as their types for this dataset of over 5 million rows
 - Found that the data includes info on types of crime, perp demographics, as well as lat/long location
 
-![alt text](link_to_image)
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/excel_data.jpg" width="750">
 
 ## 2. Importing and cleaning the data in MySQL
 - Created a table with specifications based on what I observed in the csv file
@@ -24,28 +24,27 @@ UPDATE nypd_arrests SET OFNS_DESC = 'HOMICIDE-NEGLIGENT,UNCLASSIFIED' WHERE OFNS
 [(Click here to view all of the SQL queries)](https://github.com/kennyhj/nypd_arrests/blob/main/nypd_arrests.sql)
 
 
-## 3. Imported the cleaned dataset into Tableau for visualized insights ([Link To Dashboard](https://public.tableau.com/app/profile/kenny.jeong/viz/NYPDHistoricArrests/NYPDArrestDashboard))
-- Contains: crime type bar chart, nyc precinct/boro heatmap, demographics bar chart, yearly arrest
+## 3. Imported the cleaned dataset into Tableau for visualized insights ([Link To Dashboard](https://public.tableau.com/app/profile/kenny.jeong/viz/NYPDHistoricArrests/NYPDArrestDashboard)) 
+(Dashboard can be filtered by year)
 
-![alt text](link_to_image)
-- Top 3 types of crime (drugs, assault, and theft)
-- in 2023, assault became the most common
+- Top 10 Types of Crime Bar Chart
+- Drug offenses and assaults account for the most arrests
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/top_10_crimes.jpg" width="750">
 
+- Heatmap of arrests per precinct/borough
+- Boros ranked most to least arrests: Brooklyn, Manhattan, Bronx, Queens, Staten Island
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/heatmap.jpg" width="500">
 
-![alt text](link_to_image)
-- Created a heatmap representign the number of crimes organized by borough, as well as labels for crime rates in precincts
-- (# of arrests ordered: Brooklyn, Manhattan, Bronx, Queens, Staten Island)
+- Stacked bar chart of demographics data: race, gender, and age group
+- Black males age 25-44 have the highest arrest rates, followed by White-Hispanic males age 25-44
+- (There is no sole Hispanic race value in this dataset, it is divided as White-Hispanic and Black-Hispanic) 
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/demographics.jpg" width="600">
 
-![alt text](link_to_image)
-- For demographics data, I created a chart that includes Race, Gender, as well as age group
-- Therefore was able to more accurately conclude that Black males aged 25-44 have the highest # of arrests, followed by White-Hispanic males aged 25-44
-- (in this dataset, there is no sole Hispanic category, rather it is divided into White-Hispanic and Black Hispanic)
-- image
 - examined census data from 2020 of NYC categorized by borough
-![alt text](link_to_image)
-- arrests over the years 2006 - 2023
-- generally trended downwards in the 2010s, however saw a significant rise starting in 2020
-- despite this recent trend, it is still overall half as much as the peaks of this dataset, which occured around 2009-2010, which is coincidentally post-2008 financial crisis
+
+- Line graph of # of arrests per year (2006 - 2023)
+- A downward trend in the 2010s, but then saw a significant rise starting in 2020
+<img src="https://github.com/kennyhj/nypd_arrests/blob/main/images/yearly.jpg" width="550">
 
 4. Conclusions
 - I would suggest further stuidy into the effects of the covid-19 on crime, as well as economic distressors in general
